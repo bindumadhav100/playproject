@@ -10,4 +10,5 @@ def test_dynamic_display_name():
     page = browser.new_page()
 #     allure.dynamic.link("http://playwright.dev")
     page.goto("http://playwright.dev")
+    print("test is completed")
 #     allure.dynamic.description("login to playwright site")
