@@ -1,8 +1,12 @@
+import playwright
 from playwright.sync_api import sync_playwright
 
-with sync_playwright() as p:
-    browser = p.chromium.launch()
+
+
+def test_dynamic_display_name():
+    playwright = sync_playwright().start()
+    browser = playwright.chromium.launch(headless=True)
     page = browser.new_page()
     page.goto("http://playwright.dev")
-    print(page.title())
-    browser.close()
+    print("test is completed")
+   
